@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+
 import "./App.css";
 
 function App() {
@@ -24,6 +25,14 @@ function App() {
     console.log(repos);
   }
 
+  function renderRepo(repo) {
+    return (
+      <div className="row" key={repo.id}>
+        <h2 className="repo-name">{repo.name}</h2>
+      </div>
+    );
+  }
+
   return (
     <div className="page">
       <div className="landing-page-container">
@@ -34,6 +43,7 @@ function App() {
               {loading ? "Searching... " : "Search"}
             </button>
           </form>
+          <div className="results-container">{repos.map(renderRepo)}</div>
         </div>
       </div>
     </div>

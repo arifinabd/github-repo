@@ -64,3 +64,41 @@
 .button:focus {
   outline: none;
 }
+.results-container {
+  margin-top: 10px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  cursor: pointer;
+  width: 44%;
+  height: 45px;
+  margin-top: 10px;
+  background-color: transparent;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: flex-start;
+  pointer-events: none;
+}
+
+.row > h2 {
+  color: salmon;
+  pointer-events: auto;
+}
+
+.row:hover {
+  background-color: salmon;
+}
+
+.row > h2:hover {
+  color: #282d35;
+}
+
+.repo-name {
+  margin-left: 5px;
+}
